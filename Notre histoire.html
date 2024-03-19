@@ -52,20 +52,21 @@
         </p>
         <p class="footer-text">© 2024 Soirée de l'été. Tous droits réservés.</p>
       </footer>
-</body>
-<script>
-    window.addEventListener('scroll', function() {
-        var footer = document.querySelector('footer');
-        var windowHeight = window.innerHeight;
-        var scrollHeight = window.scrollY;
-        var bodyHeight = document.body.offsetHeight;
-
-        if (windowHeight + scrollHeight >= bodyHeight) {
-            footer.style.display = 'block';
-        } else {
-            footer.style.display = 'none';
-        }
-    });
-</script>
+    
+    </body>
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            var windowHeight = window.innerHeight;
+            var scrollHeight = window.scrollY;
+            var bodyHeight = document.body.offsetHeight;
+    
+            if (windowHeight + scrollHeight >= bodyHeight) {
+                footer.style.display = 'block';
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+    </script>
 
 </html>
