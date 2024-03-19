@@ -20,11 +20,18 @@ body {
 header {
     padding: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px; /* Ajustez la taille de votre logo selon vos besoins */
+    margin-right: 10px; /* Espacement entre le logo et le titre */
 }
 
 h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 24px; /* Ajustez la taille du titre selon vos besoins */
 }
 
 nav ul {
