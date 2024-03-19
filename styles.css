@@ -1,3 +1,58 @@
+/* Styles pour le menu burger */
+.burger-menu {
+    display: none; /* Masquer le menu burger par défaut */
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+/* Styles pour le menu principal */
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Styles pour le logo */
+.logo img {
+    width: 50px;
+}
+
+/* Media Query pour les petits écrans (affichage du menu burger) */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Masquer le menu principal sur les petits écrans */
+    }
+
+    .burger-menu {
+        display: block; /* Afficher le menu burger sur les petits écrans */
+    }
+
+    header {
+        justify-content: space-between; /* Espacement entre les éléments du header */
+    }
+
+    .show {
+        display: block; /* Afficher le menu principal lorsque la classe 'show' est appliquée */
+    }
+}
+
+/* Ajoutez votre CSS existant ci-dessous */
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -14,24 +69,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
 header {
     padding: 20px;
     text-align: center;
-    display: flex;
-    align-items: center;
 }
 
-header img {
-    width: 50px; /* Ajustez la taille de votre logo selon vos besoins */
-    margin-right: 10px; /* Espacement entre le logo et le titre */
-    margin-top: 10px; /* Espacement depuis le bord supérieur */
-}
 h1 {
     margin: 0;
-    font-size: 24px; /* Ajustez la taille du titre selon vos besoins */
+    font-size: 36px;
 }
 
 nav ul {
@@ -61,20 +110,18 @@ main {
 #history {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center; /* Centrer le contenu */
+    text-align: left; /* Alignement du texte à gauche */
 }
 
 #history h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #FFCC00; /* Couleur jaune pour le titre */
 }
 
 #history p {
     font-size: 18px;
     line-height: 1.6;
     text-align: justify;
-    margin-bottom: 20px; /* Ajouter un peu d'espace en bas du paragraphe */
 }
 
 .container {
@@ -123,27 +170,6 @@ main {
     text-align: center;
 }
 
-.staff-member {
-    margin-bottom: 30px;
-}
-
-.staff-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.staff-member h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.staff-member p {
-    font-size: 18px;
-}
-
 footer {
     background-color: #222; /* Couleur de fond du footer */
     padding: 20px;
@@ -152,7 +178,6 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    display: none; /* Initialement caché */
 }
 
 .footer-text {
@@ -165,6 +190,24 @@ footer a {
     text-decoration: none;
     margin: 0 10px;
 }
+
+/* Responsive YouTube Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
     h1 {
@@ -174,6 +217,7 @@ footer a {
     nav ul li a {
         font-size: 16px;
     }
+
 
     #history h2 {
         font-size: 28px;
@@ -195,18 +239,5 @@ footer a {
 
     .label {
         font-size: 14px;
-    }
-    
-    .staff-member img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .staff-member h2 {
-        font-size: 20px;
-    }
-
-    .staff-member p {
-        font-size: 16px;
     }
 }
