@@ -8,17 +8,17 @@
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="logo" onclick="toggleMenu()">
             <img src="https://raw.githubusercontent.com/Pierre-AntoineDENIAUD/Projet-Site/main/image%20anneau.png" alt="Logo de votre site">
         </div>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Acceuil</a></li>
-                <li><a href="Nous contacter.html">Nous contacter</a></li>
+                <li><a href="Staff.html">Staff</a></li>
                 <li><a href="Notre histoire.html">Notre histoire</a></li>
                     </ul>
         </nav>
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="toggleMenu()">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -111,6 +111,10 @@
         document.querySelector('.burger-menu').addEventListener('click', function() {
             document.querySelector('.menu').classList.toggle('show');
         });
+    </script>
+    <script>function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('show');
+        }
     </script>
     <script>
         window.addEventListener('scroll', function() {
