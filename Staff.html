@@ -24,6 +24,14 @@
         <div class="line"></div>
     </div>
     <h1>Équipe Staff</h1>
+    <script>
+        document.querySelector('.burger-menu').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show');
+        });
+    </script>
+    <script>function toggleMenu() {
+        document.querySelector('.menu').classList.toggle('show');
+    }</script>
   </header>
 
   <div class="container">
@@ -52,14 +60,7 @@
     </p>
     <p class="footer-text">© 2024 Soirée de l'été. Tous droits réservés.</p>
   </footer>
-  <script>
-    document.querySelector('.burger-menu').addEventListener('click', function() {
-        document.querySelector('.menu').classList.toggle('show');
-    });
-</script>
-<script>function toggleMenu() {
-    document.querySelector('.menu').classList.toggle('show');
-}</script>
+
 <script>
     window.addEventListener('scroll', function() {
         var footer = document.querySelector('footer');
