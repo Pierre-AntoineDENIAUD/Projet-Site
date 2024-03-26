@@ -64,7 +64,8 @@ body {
 
 header {
     padding: 20px;
-    align-items: baseline;
+    text-align: left; /* Aligner le texte à gauche */
+    justify-content: flex-start; /* Déplacer le header vers la gauche */
 }
 
 h1 {
