@@ -117,10 +117,22 @@
             document.querySelector('.menu').classList.toggle('show');
         });
     </script>
-    <script>function toggleMenu() {
+    <!--<script>function toggleMenu() {
             document.querySelector('.menu').classList.toggle('show');
         }
-    </script>
+    </script> -->
+    <script>
+      function toggleMenu() {
+          var menu = document.querySelector('nav ul');
+          var isOpen = menu.classList.contains('show');
+          
+          if (isOpen) {
+              menu.classList.remove('show');
+          } else {
+              menu.classList.add('show');
+          }
+      }
+  </script>
     <script>
         window.addEventListener('scroll', function() {
             var footer = document.querySelector('footer');
