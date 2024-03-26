@@ -13,8 +13,9 @@
 
 /* Styles pour le menu principal */
 .menu {
-    display: flex;
-    list-style: none;
+    display: none;
+
+
 }
 
 .menu li {
@@ -25,6 +26,9 @@
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+}
+.menu.show {
+    display: block; /* Affichage du menu lorsque la classe 'show' est présente */
 }
 
 /* Styles pour le logo */
