@@ -85,6 +85,7 @@ h1 {
 
 nav ul {
     list-style-type: none;
+    display: none;
 }
 
 nav ul li {
@@ -100,6 +101,9 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFCC00; /* Couleur jaune au survol */
+}
+nav ul.show {
+    display: block;
 }
 
 main {
