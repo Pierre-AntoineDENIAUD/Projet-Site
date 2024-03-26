@@ -6,7 +6,10 @@
     top: 20px; /* Distance par rapport au haut de la page */
     left: 20px; /* Distance par rapport à la gauche de la page */
     z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
-    cursor: pointer; /* Afficher le curseur en forme de main lorsqu'on survole */
+}
+
+.burger-menu img {
+    width: 50px; /* Ajuster la taille de l'image */
 }
 
 .line {
@@ -19,8 +22,14 @@
 /* Styles pour le menu principal */
 .menu {
     display: none;
+    position: fixed; /* Positionnement fixe pour rester en place même lors du défilement */
+    top: 20px; /* Distance par rapport au haut de la page */
+    left: 20px; /* Distance par rapport à la gauche de la page */
+    z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+}
 
-
+.menu.show {
+    display: block; /* Affichage du menu lorsque la classe 'show' est présente */
 }
 
 .menu li {
@@ -32,40 +41,6 @@
     text-decoration: none;
     font-size: 18px;
 }
-.menu.show {
-    display: block; /* Affichage du menu lorsque la classe 'show' est présente */
-}
-
-/* Styles pour le logo */
-.logo img {
-    width: 50px;
-}
-
-/* Media Query pour les petits écrans (affichage du menu burger) */
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none; /* Masquer le menu principal sur les petits écrans */
-        position: fixed; /* Positionnement fixe pour rester en place même lors du défilement */
-        top: 20px; /* Distance par rapport au haut de la page */
-        left: 20px; /* Distance par rapport à la gauche de la page */
-        z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
-        cursor: pointer; /* Afficher le curseur en forme de main lorsqu'on survole */
-    }
-
-    .burger-menu {
-        display: block; /* Afficher le menu burger sur les petits écrans */
-    }
-
-    header {
-        justify-content: space-between; /* Espacement entre les éléments du header */
-    }
-
-    .show {
-        display: block; /* Afficher le menu principal lorsque la classe 'show' est appliquée */
-    }
-}
-
-/* Ajoutez votre CSS existant ci-dessous */
 
 /* Reset CSS */
 * {
@@ -99,7 +74,6 @@ h1 {
 
 nav ul {
     list-style-type: none;
-    display: none;
 }
 
 nav ul li {
@@ -115,77 +89,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFCC00; /* Couleur jaune au survol */
-}
-nav ul.show {
-    display: block;
-}
-
-main {
-    text-align: center;
-    padding: 20px;
-}
-
-#history {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left; /* Alignement du texte à gauche */
-}
-
-#history h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-#history p {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.container p {
-    font-size: 18px;
-}
-
-.countdown-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.countdown-item {
-    font-size: 36px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    user-select: none; /* Empêche la sélection du texte */
-    pointer-events: none; /* Désactive les événements de la souris */
-    width: 80px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff; /* Texte en blanc */
-}
-
-.blue { background-color: #0099CC; }
-.yellow { background-color: #FFCC00; }
-.black { background-color: #000; }
-.green { background-color: #339900; }
-.red { background-color: #CC0000; }
-
-.label {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 5px;
-    text-align: center;
 }
 
 footer {
@@ -236,26 +139,19 @@ footer a {
         font-size: 16px;
     }
 
-
-    #history h2 {
-        font-size: 28px;
+    .menu {
+        display: none; /* Masquer le menu principal sur les petits écrans */
     }
 
-    #history p {
-        font-size: 16px;
+    .burger-menu {
+        display: block; /* Afficher le menu burger sur les petits écrans */
     }
 
-    .container p {
-        font-size: 16px;
+    header {
+        justify-content: space-between; /* Espacement entre les éléments du header */
     }
 
-    .countdown-item {
-        font-size: 24px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .label {
-        font-size: 14px;
+    .show {
+        display: block; /* Afficher le menu principal lorsque la classe 'show' est appliquée */
     }
 }
