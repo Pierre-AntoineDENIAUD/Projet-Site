@@ -7,6 +7,14 @@
     left: 20px; /* Distance par rapport à la gauche de la page */
     z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
 }
+.burger-logo {
+    display: none; /* Masquer le menu burger par défaut */
+    cursor: pointer;
+    position: fixed; /* Positionnement fixe pour rester en place même lors du défilement */
+    top: 20px; /* Distance par rapport au haut de la page */
+    left: 20px; /* Distance par rapport à la gauche de la page */
+    z-index: 1000; /* Assure que le bouton reste au-dessus des autres éléments */
+}
 
 .burger-menu img {
     width: 50px; /* Ajuster la taille de l'image */
