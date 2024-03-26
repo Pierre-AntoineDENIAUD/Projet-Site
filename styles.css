@@ -64,7 +64,7 @@ body {
 
 header {
     padding: 20px;
-    
+    align-items: baseline;
 }
 
 h1 {
